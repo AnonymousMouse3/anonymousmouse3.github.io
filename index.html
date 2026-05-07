@@ -13,6 +13,48 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
+	<style>
+		* {box-sizing: border-box}
+		.mySlides1, .mySlides2 {display: none}
+		img {vertical-align: middle;}
+
+		/* Slideshow container */
+		.slideshow-container {
+			max-width: 1000px;
+			position: relative;
+			margin: auto;
+		}
+
+		/* Next & previous buttons */
+		.prev, .next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			width: auto;
+			padding: 16px;
+			margin-top: -22px;
+			color: white;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+			right: 0;
+			border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a grey background color */
+		.prev:hover, .next:hover {
+			background-color: #f1f1f1;
+			color: black;
+		}
+	</style>
+	
 	<body class="is-preload">
 
 		<!-- Wrapper-->
@@ -36,10 +78,8 @@
 							<header>
 								<h2 style="align-content: center">Heya, I'm Evelyn Straughton</h2>
 								<p style="align-content: center">
-									<br>I'm a game designer and developer, focused on creating and implementing game mechanics - I write obsessively modular code.
-									<br><br>I make shooter games with unique mechanics, design intuitive controls, and I value
-									<a style="color: #222222" href="https://www.goodreads.com/book/show/3385050-game-feel">Game Feel</a> in the design process.
-									<br><br>A new game changes my life and wrecks me emotionally at an approximate rate of once per year.
+									<br>I'm a game designer and Unity developer specialising in gameplay programming and design - 3 years C#/Unity experience, dabbled in Unreal.
+									<br><br>I'm interested in practically every genre, but I often create shooter games to chase niche gameplay ideas - focusing on intuitive controls, modularity, scalability, and good <a style="color: #222222" href="https://www.goodreads.com/book/show/3385050-game-feel">game feel</a>.
 									<br><br>Reach out to me at <a style="color: #222222" href="mailto:evelynstraughton@gmx.com">evelynstraughton@gmx.com</a>!
 								</p>
 							</header>
@@ -56,91 +96,143 @@
 								<h2>Work</h2>
 							</header>
 							<p>
-								A collection of my most notable works - listed here are a combination of solo and team projects.
-								<br><br>All art is placeholder, or the work of others! These showcases are for mechanics and gameplay only, without proper models, textures, and animations.
-								<br><br>These examples are primarily games or prototypes, but I also create modular and flexible developer tools for Unity, such as my Weapon System and Health System.
+								All the projects I've been involved with!
+								<br><br>The works here are a combination of solo and team projects, I'll explain my role and contributions below each of them.
+								<br><br><b>Please note that all art and visuals are placeholder</b> - I'm a programmer, not an artist :p
 							</p>
 							<section>
 								<div class="row">
 									<div class="col-12 col-12-medium col-24-small">
 										<h3>Codename "Squads"</h3>
 										<p>Flagship Solo Project</p>
-										<a href="#" class="image fit"><img src="images/squads1.jpg" alt=""></a>
+										<a class="image fit"><img src="images/squads1.jpg" alt=""></a>
 										<p>
-											<br>My heavily in-development, solo passion project (release date TBA), conceived as a true hybrid between the real-time strategy and third-person shooter genres. The player uses an entire squad of units in immersive, third-person combat, with intelligent and adaptive AI, deep yet intuitive controls, and the ability to directly control unit weapons as an extension of the player.
+											<br>My heavily in-development passion project, conceived as a true hybrid between a singleplayer RTS and third-person shooter.
+											<br><br>The player uses an entire squad of intelligent units in immersive third-person combat, emphasising the importance of their allies - they're just as capable as you, and going solo is not an option.
+											<br><br>Features include goal-oriented planning AI for both player and enemy units, seamless gameplay transitions, and deep squad/multi-unit mechanics blended with classic FPS/TPS gameplay.
 											<br><br>The game is in heavy concept and testing at this stage, more images will be shared as the project develops.
 										</p>
 									</div>
                                     <div class="col-12 col-12-medium col-24-small">
                                         <h3>Codename "Spellslinger"</h3>
                                         <p>Flagship Team Project</p>
-                                        <a href="#" class="image fit"><img src="images/spellslinger1.png" alt=""></a>
+                                        <a class="image fit"><img src="images/spellslinger1.png" alt=""></a>
                                         <p>
-                                            <br>An in-development third-person magic-shooter game, set to release in 2026 and developed by a team of 6 including myself.
-                                            <br><br>I am a principal game designer and gameplay programmer for the project, responsible for the development of player movement, weapons (via module), health (via module), among other systems. I also contributed to many important aspects of game design, such as the unique healing system.
-                                            <br><br>The game is in alpha and heavy development at this stage, more images will be shared as the project develops.
+                                            <br>Our in-development third-person magic boomer-shooter, (ETA 2026) developed by a team of 6.
+                                            <br><br>I take the role of joint project lead, my responsibilities include development of combat and movement, along with important game design contributions, such as the unique healing system.
+                                            <br><br>The game is in heavy development at this stage - images will be shared as the project develops.
                                         </p>
                                     </div>
+
 									<div class="col-12 col-12-medium col-24-small">
-										<h3>Prototype - Drones</h3>
+										<h3>Drones</h3>
 										<p>Solo Project</p>
-										<a href="#" class="image fit"><img src="images/drones1.jpg" alt=""></a>
 									</div>
-									<div class="col-12 col-12-medium col-24-small">
-										<a href="#" class="image fit"><img src="images/drones2.jpg" alt=""></a>
+									<!--slideshow-->
+									<div class="slideshow-container">
+										<div class="mySlides1">
+											<video id="drones_video_1" class="video-js vjs-default-skin" width="966" height="546" src="videos/dronesvideo1.mp4" type='video/mp4' autoplay muted>
+											</video>
+										</div>
+										<div class="mySlides1">
+											<img src="images/drones1.jpg" style="width:100%">
+										</div>
+
+										<div class="mySlides1">
+											<img src="images/drones2.jpg" style="width:100%">
+										</div>
+
+										<div class="mySlides1">
+											<img src="images/drones3.jpg" style="width:100%">
+										</div>
+
+										<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
 									</div>
+									
 									<div class="col-12 col-12-medium col-24-small">
-										<a href="#" class="image fit"><img src="images/drones3.jpg" alt=""></a>
 										<p>
-											<br>A gameplay proof-of-concept which may be implemented into “Squads” in the future. Featuring combat based around a swarm of drones stored in the player’s wings, commanding them to perform tasks such as attacking enemies or shielding the player. A playable demo is available on itch.io <a style="color: #222222" href="https://anonymousmouse3.itch.io/prototype-drones">here</a>.
+											A gameplay proof-of-concept for a drone-based combat moveset - which may be implemented into “Squads” in the future.
+											<br><br>Features some basic combat with target dummies. The wings deploy a swarm of drones, which can be commanded to attack or shield.
+											<br><br>A playable demo is available on itch.io <a style="color: #222222" href="https://anonymousmouse3.itch.io/prototype-drones">here</a>.
 										</p>
 									</div>
+
 									<div class="col-12 col-12-medium col-24-small">
-											<h3>Boids and A* Playground</h3>
-											<p>Solo Project</p>
-										<a href="#" class="image fit"><img src="images/boids1.jpg" alt=""></a>
+										<h3>Boids and A* Playground</h3>
+										<p>Solo Project</p>
+									</div>
+									
+									<div class="slideshow-container">
+										<div class="mySlides2">
+											<video class="video-js vjs-default-skin" width="966" height="546" src="videos/boidsvideo1.mp4" type='video/mp4' autoplay muted>
+											</video>
+										</div>
+
+										<div class="mySlides2">
+											<img src="images/boids1.jpg" style="width:100%">
+										</div>
+
+										<div class="mySlides2">
+											<video class="video-js vjs-default-skin" width="966" height="546" src="videos/astarvideo1.mp4" type='video/mp4' autoplay muted>
+											</video>
+										</div>
+
+										<div class="mySlides2">
+											<img src="images/boids3.png" style="width:100%">
+										</div>
+
+										<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+									</div>
+									
+									<div class="col-12 col-12-medium col-24-small">
+										
 									</div>
 									<div class="col-12 col-12-medium col-24-small">
-										<a href="#" class="image fit"><img src="images/boids2.jpg" alt=""></a>
-									</div>
-									<div class="col-12 col-12-medium col-24-small">
-										<a href="#" class="image fit"><img src="images/boids3.png" alt=""></a>
 										<p>
-											<br>A toybox simulation of two well-known algorithms in game development - the bird-oid object algorithm, commonly known as "boids", and an implementation of A* pathfinding. A playable demo is available on itch.io <a style="color: #222222" href="https://anonymousmouse3.itch.io/boids-and-a-playground">here</a>.
+											A toybox simulation of two well-known algorithms in game development - a boids simulation with multiple groups and obstacles, and an implementation of A* pathfinding.
+											<br><br>A playable demo is available on itch.io <a style="color: #222222" href="https://anonymousmouse3.itch.io/boids-and-a-playground">here</a>.
 										</p>
 									</div>
+									
                                     <div class="col-12 col-12-medium col-24-small">
-                                        <h3>Weapon System</h3>
+                                        <h3>Custom Weapon System</h3>
                                         <p>Unity Developer Tool</p>
-                                        <a href="#" class="image fit"><img src="images/weapons1.png" alt=""></a>
+										<a class="image fit"><img src="images/weapons3.png" alt=""></a>
                                     </div>
                                     <div class="col-12 col-12-medium col-24-small">
-                                        <a href="#" class="image fit"><img src="images/weapons2.png" alt=""></a>
                                         <p>
-                                            <br>A modular framework to design various weapons, with support for many different mechanics and variants - it is designed to work with GameObjects, such that custom functionality can be added to weapons or projectiles easily. It remains under heavy and active development, used within flagship projects "Squads" and "Spellslinger", as well within the "Drones" prototype and many smaller projects.
+                                            My user-friendly and modular weapons framework for Unity, allowing non-technical developers to create anything that shoots some kind of thing, whether that's a gun, spell, ability, or space fortress megalaser.
+                                            <br><br>Weapons are made entirely with the Unity inspector and some prefabs, without touching any scripts. If custom mechanics or functionality are desired, just attach new scripts and hook into some events - it's an extendable system.
+											<br><br>Out of the box, it supports multiple weapon slots per character, custom inputs, and an as-complex-as-you-need weapon actions system for any required alt-fires, double barrels, or overcomplicated ammo-swapping, remote-detonated things.
+											<br><br>It's designed for modularity and compatibility, hooking into Unity's systems rather than relying heavily on custom libraries. All of my solo and team projects use this system, and it remains under heavy development.
                                         </p>
                                     </div>
                                     <div class="col-12 col-12-medium col-24-small">
-                                        <h3>Health System</h3>
-                                        <p>Unity Developer Tool</p>
-                                        <a href="#" class="image fit"><img src="images/health1.png" alt=""></a>
-                                    </div>
-                                    <div class="col-12 col-12-medium col-24-small">
-                                        <a href="#" class="image fit"><img src="images/health2.png" alt=""></a>
-                                        <p>
-                                            <br>A modular health mechanic, with options for advanced features such as overheal and the bespoke Lifeleech mechanic of Codename "Spellslinger". It also contains a system for passive effects, such as elemental damage-over-time effects. It also remains under development, used within the above flagship projects, among others.
+                                        <h3>Custom Health/Damage System</h3>
+                                        <p>Unity Developer Tool
+                                            <br><br>My custom module for health and damage mechanics, including all the basics of damage and healing, along with features such as overhealing, lifestealing, and more.
+											<br><br>It also contains a system for status effects - I used this component in many of my projects, and it remains under heavy development.
                                         </p>
                                     </div>
 									<div class="col-12 col-12-medium col-24-small">
+										<h3>Custom Movement System</h3>
+										<p>Unity Developer Tool
+											<br><br>My movement system based on Unity's rigidbody physics - modular, designed to take a single input vector from player input or AIs.
+											<br><br>I have used and iterated on this component more than most, and I have larger plans for it - including advanced movement such as sliding, bunny-hopping, and wall-running.
+										</p>
+									</div>
+									<!--<div class="col-12 col-12-medium col-24-small">
 										<h3>"Project Stealth"</h3>
-										<p>Team Project</p>
-										<a href="#" class="image fit"><img src="images/stealth1.png" alt=""></a>
+										<p>Team Project
+										<a href="https://stealthcoder27.itch.io/stealth-game?password=portfolio" class="image fit"><img src="images/stealth1.png" alt=""></a>
 									</div>
 									<div class="col-12 col-12-medium col-24-small">
-										<a href="#" class="image fit"><img src="images/stealth2.png" alt=""></a>
+										<a href="https://stealthcoder27.itch.io/stealth-game?password=portfolio" class="image fit"><img src="images/stealth2.png" alt=""></a>
 									</div>
 									<div class="col-12 col-12-medium col-24-small">
-										<a href="#" class="image fit"><img src="images/stealth3.png" alt=""></a>
+										<a href="https://stealthcoder27.itch.io/stealth-game?password=portfolio" class="image fit"><img src="images/stealth3.png" alt=""></a>
 										<p>
 											<br>A duo project stealth game, developed by myself and another programmer. The demo features traditional stealth gameplay, with the addition of a drone owned by the player hovering above the playable area. The drone may be used to supplement the player’s limited resources, but is only available in outdoor areas. I was responsible for the weapons (via module), the most of drone’s mechanics, and a portion of the enemy AI and stealth mechanics. The demo is available on itch.io <a style="color: #222222" href="https://stealthcoder27.itch.io/stealth-game?password=portfolio">here</a>.
 										</p>
@@ -148,17 +240,17 @@
 									<div class="col-12 col-12-medium col-24-small">
 										<h3>"Resident Evil Fan Remake"</h3>
 										<p>Team Project</p>
-										<a href="#" class="image fit"><img src="images/re1.jpg" alt=""></a>
+										<a class="image fit"><img src="images/re1.jpg" alt=""></a>
 									</div>
 									<div class="col-12 col-12-medium col-24-small">
-										<a href="#" class="image fit"><img src="images/re2.jpg" alt=""></a>
+										<a class="image fit"><img src="images/re2.jpg" alt=""></a>
 									</div>
 									<div class="col-12 col-12-medium col-24-small">
-										<a href="#" class="image fit"><img src="images/re3.jpg" alt=""></a>
+										<a class="image fit"><img src="images/re3.jpg" alt=""></a>
 										<p>
 											<br>A vertical slice remake of the 1996 classic, developed by a team of 4, myself included. I was one of two programmers for the project, responsible for player movement, including the recreation of Resident Evil’s famous “tank controls”, as well as an alternate modern control scheme, weapons (via module), enemy AI, and the remaking of the fixed camera system.
 										</p>
-									</div>
+									</div>-->
 								</div>
 							</section>
 						</article>
@@ -240,6 +332,29 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<script>
+			let slideIndex = [1,1];
+			let slideId = ["mySlides1", "mySlides2"]
+			showSlides(1, 0);
+			showSlides(1, 1);
+
+			function plusSlides(n, no) {
+				showSlides(slideIndex[no] += n, no);
+			}
+
+			function showSlides(n, no) {
+				let i;
+				let x = document.getElementsByClassName(slideId[no]);
+				if (n > x.length) {slideIndex[no] = 1}
+				if (n < 1) {slideIndex[no] = x.length}
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				x[slideIndex[no]-1].style.display = "block";
+			}
+		</script>
+	
 
 	</body>
 
